@@ -1,0 +1,14 @@
+desktop.ini
+
+#codeblocs#
+*.cbp
+*.layout
+*.depend
+*.o
+*.exe
+
+
+#general dir#
+
+bin/
+obj/
