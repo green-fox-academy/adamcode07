@@ -2,7 +2,7 @@
 
 // TODO: Include needed header files
 #include "another_file.h"
-#include "another_file.c"
+//#include "another_file.c"
 
 int main() {
     // Set the default state of the variable
