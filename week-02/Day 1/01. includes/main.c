@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "another_file.c"
-// TODO: Include needed header files
 
+// TODO: Include needed header files
+#include "another_file.h"
+#include "another_file.c"
 
 int main() {
     // Set the default state of the variable
