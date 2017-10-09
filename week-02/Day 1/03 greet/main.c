@@ -7,15 +7,13 @@
 
 char greet(a, b, c, d)
 {
-    char name;
-    printf("Hi %c \n", greet(name));
+    char greeting_name;
+
 }
 
 int main()
 {
-    char name
-    greet(name)
- /*   char name;
+    char name;
     char name2;
     char name3;
     char name4;
@@ -24,6 +22,6 @@ int main()
     printf("Hi %c \n", greet(name2));
     printf("Hi %c \n", greet(name3));
     printf("Hi %c \n", greet(name4));
-   */
+
     return 0;
 }
