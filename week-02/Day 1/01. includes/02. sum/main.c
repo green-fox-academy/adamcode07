@@ -11,7 +11,7 @@ int sum(int aa, int bb, int cc)
 
 int main()
 {
-    printf("%d\n", sum(a, b, c));
+    printf("%d \n", sum(a, b, c));
 
     return 0;
 }
