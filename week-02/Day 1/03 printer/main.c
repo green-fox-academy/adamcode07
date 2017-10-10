@@ -15,7 +15,7 @@ int printer(int num1,int num2,int num3,int num4)
 
 int main()
 {
-    printf("%d \n", printer(a, b, c, d));
+    printf("The result is %d \n", printer(a, b, c, d));
   //printf("%d \n", sum(a, b, c));
 
     return 0;
