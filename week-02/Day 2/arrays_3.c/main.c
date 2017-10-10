@@ -7,12 +7,13 @@ int main() {
 	//int i;
       //  for(i = 0; i < sizeof(int_array); i++)
         //    printf("%c \n", int_array[i]);
-
-    float i;
-        for(i = 0; i < sizeof(float_array); i++)
-            printf("%f \n", float_array[i]);
+    for(int i = 0; i < sizeof(int_array)/4; i++)
+        printf("%d\n", int_array[i]);
 	//TODO:
     // Print out the content of the arrays
+
+    for (int i = 0; i < sizeof(float_array)/4; i++)
+        printf("%.3f\n", float_array[i]);
 
     return 0;
 }
