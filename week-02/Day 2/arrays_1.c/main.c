@@ -2,7 +2,7 @@
 
 int main() {
     char my_name_array[] = "My Name";
-        int i = 0;
+        int i;
         for(i = 0; i < sizeof(my_name_array); i++){
             printf("%c \n", my_name_array[i]);
         }
