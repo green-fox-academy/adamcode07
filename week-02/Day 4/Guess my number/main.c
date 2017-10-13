@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+//#include <time.h>
 
 //srand(time(NULL));
 int players_guess = 0;
@@ -10,7 +10,7 @@ int main(){
 
 
 int computers_number = rand() % 100;
-printf("%d", computers_number);
+//printf("%d", computers_number);
   for(int i = 0; i < 6; i++) {
     printf("Guess a number between 1 and 100 \n");
     scanf("%d, \n", &players_guess);
@@ -31,4 +31,3 @@ printf("%d", computers_number);
 
     return 0;
 }
-

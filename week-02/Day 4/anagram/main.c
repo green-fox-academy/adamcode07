@@ -1,34 +1,48 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
-//srand(time(NULL));
-int players_guess = 0;
-int lives = 5;
+
+int anagram(){
+
+    char string_a[] = "kerekerdo";
+    char string_b[] = "redorekek";
+
+    char swap;
+
+    int i, j;
+    int n = strlen(string_a);
+    int n1 = strlen(string_b);
+
+
+    if(n != n1){
+        printf("Words %d and %d are not the same length \n", string_a, string_b);
+        return 0;
+    }
+
+    for(i = 0; i < n - 1; i++){
+        for (j = i + 1; j < n; j++){
+            if (string_a[j] > string_b[j+1]){
+                       swap = string_a[j];
+                string_a[j] = string_a[j+1];
+               string_a[j+1]= swap;
+            }
+        }
+    }
+
+    for(i = 0; i < n; i++){
+        //if string_a[i] != string_b[i]{
+            printf("These are not anagrams \n");
+            return 0;
+//        } else {
+        printf("These are anagrams");
+        return 0;
+        }
+    }
+//}
 
 int main(){
 
-
-int computers_number = rand() % 100;
-printf("%d", computers_number);
-  for(int i = 0; i < 6; i++) {
-    printf("Guess a number between 1 and 100 \n");
-    scanf("%d, \n", &players_guess);
-
-    lives--;
-
-    if(players_guess > computers_number) {
-        printf("Too high. You have %d lives left \n", lives);
-    } else if (players_guess < computers_number){
-        printf("Too low. You have %d lives left \n", lives);
-    } else if (players_guess == computers_number){
-        printf("Congratulations");
-    }
-  }
-    if(lives == 0){
-        printf("You lost");
-    }
+    anagram();
 
     return 0;
 }
-
