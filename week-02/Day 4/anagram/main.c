@@ -4,8 +4,8 @@
 
 int anagram(){
 
-    char string_a[] = "kutya";
-    char string_b[] = "aytuk";
+    char string_a[] = "kutyzza";
+    char string_b[] = "aytzzuk";
 
     char temp;
 
