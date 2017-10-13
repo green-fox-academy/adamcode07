@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <time.h>
+#include <time.h>
 
-//srand(time(NULL));
+
 int players_guess = 0;
 int lives = 5;
 
 int main(){
 
-
+srand(time(NULL));
 int computers_number = rand() % 100;
 //printf("%d", computers_number);
   for(int i = 0; i < 6; i++) {

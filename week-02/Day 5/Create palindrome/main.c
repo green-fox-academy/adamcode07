@@ -4,11 +4,12 @@
 
 int create_palidrome()
 {
-    char string_a[100] = "akkor";
+    char string_a[100] = "kerekerdo";
 
     int n = strlen(string_a);
 
     printf("%s", string_a);
+
     for(int i = n - 1 ; i >= 0 ; i--)
         printf("%c" , string_a[i]);
 
