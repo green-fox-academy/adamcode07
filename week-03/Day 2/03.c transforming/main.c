@@ -1,8 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-    printf("Hello world!\n");
+	int a = 54325;
+    char buffer[20];
+
+    //TODO: make an integer to string conversion with itoa(), first in binary, then decimal format
+    itoa(a, buffer, 2);
+    printf("binary: %s\n", buffer);
+    itoa(a,buffer,10);
+    printf("decimal: %s\n", buffer);
+    // Store the string in buffer
+
     return 0;
 }

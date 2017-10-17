@@ -1,18 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include<stdio.h>
 
 int main()
 {
-	int a = 54325;
-    char buffer[20];
+	double x = 1.2;
 
-    //TODO: make an integer to string conversion with itoa(), first in binary, then decimal format
-    int itoa(i, buffer, 2);
-    printf("binary: %s\n", buffer);
-    int itoa(i, buffer, 10);
-    printf("decimal: %s\n", buffer);
-    // Store the string in buffer
+    //TODO: write a program wich adds up x and 1, and print out it rounded.
+    double program = x + 1;
+
+    printf("%.f\n", program);
 
     return 0;
 }
