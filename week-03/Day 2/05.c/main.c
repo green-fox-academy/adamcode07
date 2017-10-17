@@ -1,8 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
+
+//TODO: write a function which returns 485 as unsigned integer value
+//put your return value in an integer variable in which you should have 229, and print it out
+//try to figure out which type casting you should use
+
 
 int main()
 {
-    printf("Hello world!\n");
+	u_int function_a() = 485;
+    int a = 229;
+
     return 0;
 }
