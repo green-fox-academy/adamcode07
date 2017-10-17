@@ -13,6 +13,8 @@ int main()
     int original_base;
     int new_base;
 
+    char buffer[20];
+
     printf("Give me a number to transform it in an other system: ");
     scanf("%s", str);
     printf("Give me the original base: ");
@@ -20,6 +22,10 @@ int main()
     printf("Give me the number of the new base: ");
     scanf("%d", &new_base);
 
-    transform(str, original_base, new_base);
+//    transform(str, original_base, new_base);
+
+    itoa(str, buffer, 2);
+    printf("Base: binary value: %s\n", buffer);
+
     return(0);
 }
