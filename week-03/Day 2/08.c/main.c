@@ -22,10 +22,23 @@ int main()
     printf("Give me the number of the new base: ");
     scanf("%d", &new_base);
 
-//    transform(str, original_base, new_base);
+    transform(str, original_base, new_base);
 
     itoa(str, buffer, 2);
     printf("Base: binary value: %s\n", buffer);
 
     return(0);
+}
+
+void transform (char str[], int original_base, int new_base)
+{
+
+    char *ptr;
+    int decimal = strtol(str, &ptr, original_base);
+    printf("%d\n", decimal);
+    char buffer[20];
+
+    itoa(decimal, buffer, new_base);
+    printf("%s\n", buffer);
+
 }

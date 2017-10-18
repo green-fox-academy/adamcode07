@@ -9,7 +9,7 @@
 int main()
 {
 	int x, y;
-	int count;
+	int count = 0;
 	int guess = 0;
 	int rand_max;
 	int rand_min;
@@ -24,12 +24,11 @@ int main()
 	//x = lives
 
 
-	printf("I have a number between %d and %d. You have %d lives\n", rand_min, rand_max, x);
+	printf("I have a number between %d and %d. You have %d lives\n", rand_min, rand_max, x - 1);
 
 	for (count = 0; count < x - 1; count++) {
 		printf("Give me a number \n>");
 		scanf("%d", &guess);
-
 //		while { (1)
 
 			if (guess == rand_num) {
