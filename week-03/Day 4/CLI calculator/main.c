@@ -8,8 +8,10 @@
 COORD coord = {0,0};
 void help();
 void set_cursor_pos(int x, int y);
-float summition();
-float subtraction();
+void summition(char command[]);
+void subtraction(char command[]);
+void multiplication(char command[]);
+void division(char command[]);
 
 int main ()
 {
@@ -43,7 +45,16 @@ int main ()
         if (strstr(command, "-") != 0){
 
             subtraction(command);
+        }
 
+        if (strstr(command, "*") != 0){
+
+            multiplication(command);
+        }
+
+        if (strstr(command, "/") != 0){
+
+            division(command);
 
         }
     }
@@ -87,7 +98,7 @@ void set_cursor_pos(int x, int y)
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-float summition(char (command[]))
+void summition(char (command[]))
 {
     char* op_1;
     char* op_2;
@@ -105,7 +116,7 @@ float summition(char (command[]))
     printf("%.2f", result);
 }
 
-float subtraction(char (command[]))
+void subtraction(char (command[]))
 {
     char* op_1;
     char* op_2;
@@ -122,3 +133,39 @@ float subtraction(char (command[]))
 
     printf("%2.f", result);
 }
+
+void multiplication(char (command[]))
+{
+    char* op_1;
+    char* op_2;
+    float input_1, input_2;
+    float result;
+
+    op_1 = strtok(command, "*");
+    op_2 = strtok(NULL, "*");
+
+    input_1 = atof(op_1);
+    input_2 = atof(op_2);
+
+    result = input_1 * input_2;
+
+    printf("%2.f", result);
+}
+
+void division(char command[])
+{
+    char* op_1;
+    char* op_2;
+    float input_1, input_2;
+    float result;
+
+    op_1 = strtok(command, "/");
+    op_2 = strtok(NULL, "/");
+
+    input_1 = atof(op_1);
+    input_2 = atof(op_2);
+
+    result = input_1 / input_2;
+
+    printf("%2.f", result);
+    }
