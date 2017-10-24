@@ -1,14 +1,22 @@
 #include <stdio.h>
-#include <stdint.h>
-
-void printf_numbers(int64_t from, int64_t to)
-{
-	for (int i = from; i < to; i++)
-		printf("%d,", i);
-}
+#include <stdlib.h>
 
 int main()
 {
-	printf_numbers(2147483600, 2147484600);
-	return 0;
+    float f_array[10] = {5.6, 8.73, 0.15, 0.99, 1.5, 6.3589, 10.01, -33.0, 0, 15};
+    int i_array[10];
+
+	//TODO: write a program, which copies the values from the given array to an integer array
+    //print out the elements of the integer array, with the "%d" format specifier
+    //what do you see?
+
+    // the printed values do not have the fractional part which have been cut off by the integer parsing
+
+        for(int i = 0; i < 10; i++){
+    i_array[i] = f_array[i];
+    printf("Element %d is %d\n", i+1, i_array[i]);
+    }
+
+        return 0;
+
 }
