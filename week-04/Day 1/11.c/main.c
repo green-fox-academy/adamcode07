@@ -2,7 +2,6 @@
 
 void calc(int a, int b, int *p_sum, int *p_mul)
 {
-
     *p_sum = a + b;
 
     *p_mul = a * b;
