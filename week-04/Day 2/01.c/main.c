@@ -16,9 +16,6 @@ int main() {
     computer1.bits = 64;
 
     //TODO: print out the structure members
-    //computer1.cpu_speed_GHz = 3.2;
-    //computer1.ram_size_GB = 8;
-    //computer1.bits = 32;
 
     printf( "CPU speed : %f\n", computer1.cpu_speed_GHz);
     printf( "CPU speed : %d\n", computer1.ram_size_GB);
