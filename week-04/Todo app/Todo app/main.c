@@ -2,10 +2,32 @@
 #include <stdlib.h>
 
 void welcome_scr();
+int task_number = 0; //a tomb melyik elemeebe rakjuk a teendot
+
+typedef struct {
+
+    char duty [20];
+    int prio;
+    int checked;
+
+} todo_t;
+
+void add_new_task(todo_t task_name, char *name);
 
 int main()
 {
+    char command[255];
+    todo_t todos[100];
     welcome_scr();
+    while(1)
+    {
+        gets(command);
+        char *tok1 = strtok(command, " ");
+        char *tok2 = strtok(NULL, " ");
+        if(strcmp(tok1, "-a")){
+
+        }
+    }
 
     return 0;
 }
@@ -28,10 +50,8 @@ void welcome_scr(){
     return 0;
 }
 
-typedef struct {
+void add_new_task(todo_t task_name, char *name)
+{
 
-    char duty [20];
-    int prio;
-    int checked;
 
-};
+}
