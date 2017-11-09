@@ -36,7 +36,7 @@ int main()
 
     printf("The avg grade of the students is %.3f\n", avg_grade(students, len));
     plz_behave_good(students, len);
-//    printf("The number of good students with 5 grades: %d", good_behav_counter(n));
+    printf("The number of good students with 5 grades: %d", good_behav_counter(n));
 
     return 0;
 }
