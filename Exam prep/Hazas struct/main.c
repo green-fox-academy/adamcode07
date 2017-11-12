@@ -45,12 +45,12 @@ int main() {
   //printf("%s is %s\n", House[0].address, home_evaluator(House));
   //printf("%s is %s\n", House[1].address, home_evaluator(House));
 
-  printf("There are %d houses worth to buy", value_deal_counter(House, len));
+  printf("There are %d houses worth to buy\n", value_deal_counter(House, len));
 
   int i = 0;
   for (i = 0; i < len; i++)
   {
-      if (home_evaluator(&House[i] == 1))
+      if (home_evaluator(&House[i]) == 1)
       {
           printf("Buy it %d\n", i + 1);
       } else {
@@ -63,11 +63,11 @@ int main() {
 
 int home_evaluator(struct house *h)
 {
-    //int i = 0;
+    int i = 0;
 
     //for (i = 0; i < len; i++)
     {
-        if ( MARKET_PRICE > (h->price / h->price))
+    if ( MARKET_PRICE > (h->price / h->area))
         {
             return 1;
         } else {
