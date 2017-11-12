@@ -22,6 +22,13 @@ int main()
     int age = 32;
     cout << age << endl;
 
+    string coffee = "Likes coffee: ";
+    cout <<  coffee;
+    if (true)
+        std::cout << "true" << endl;
+    else
+        std::cout << "false" << endl;
+
 
 
     return 0;
