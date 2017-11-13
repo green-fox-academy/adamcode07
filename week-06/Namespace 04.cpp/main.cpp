@@ -25,7 +25,7 @@ int func() {
 //        using Maria::age;
 
         int sum = 0;
-        sum = Mark.age + Maria.age;
+        sum = Mark::age + Maria::age;
 
         return sum;
 }
@@ -33,8 +33,8 @@ int func() {
 int main()
 {
 
-    using namespace Mark;
-    using namespace Maria;
+    //using namespace Mark;
+    //using namespace Maria;
 
     cout << func() << endl;
 
