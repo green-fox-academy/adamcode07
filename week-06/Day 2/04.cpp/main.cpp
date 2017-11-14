@@ -4,7 +4,6 @@
 using namespace std;
 
 
-
 class House {
   private:
     string address;
