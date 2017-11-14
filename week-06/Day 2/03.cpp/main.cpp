@@ -10,11 +10,10 @@ class Student {
     Student(string name) {
       this->name = name;
     }
+
     string greet(){
 
         return name;
-        //cout << "Hello my name is " << name << endl;
-
     }
 
 };
