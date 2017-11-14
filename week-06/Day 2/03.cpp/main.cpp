@@ -15,7 +15,6 @@ class Student {
 
         return name;
     }
-
 };
 
 int main() {
