@@ -21,7 +21,7 @@ class Car {
 
             return type;
             }
-    };
+};
 
 int main() {
 
