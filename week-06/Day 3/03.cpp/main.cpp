@@ -9,7 +9,7 @@ class Shape {
     protected:
 
         float area;
-        int price;
+        float price;
 
     public:
 
@@ -19,31 +19,29 @@ class Shape {
             return area;
         }
 
-        int get_paint(){
-            return price;
+        float how_much_to_paint(){
+            return area * price;
         }
 
-        virtual float how_much_to_paint(int price) = 0;
+        float set_price(float price){
+            this->price = price;
+        }
 
 };
 
 class Circle: public Shape{
 
     private:
-        int radius;
+        float radius;
 
     public:
-        Circle(int radius){
+        Circle(float radius){
             this->radius = radius;
+            calc_area();
         }
 
         float calc_area(){
-            area = 3.14 * (float)radius * (float)radius;
-            return area;
-        }
-
-        float how_much_to_paint(int price){
-            return area * price;
+            area = 3.14 * radius * radius;
         }
 
 };
@@ -51,43 +49,32 @@ class Circle: public Shape{
 class Triangle: public Shape{
 
     protected:
-        int a;
-        int b;
+  //      int a;
+    //    int b;
 
-        int height;
-        int base;
-        float area;
+        float height;
+        float base;
 
     public:
-        Triangle(int height, int base){
-            this-> a = a;
-            this-> b = b;
+        Triangle(float height, float base){
+    //        this-> a = a;
+      //      this-> b = b;
             this-> height = height;
             this-> base = base;
-            this-> area = area;
-
-            this-> price = price;
+            calc_area();
         }
 
         float calc_area(){
             area = base * height * 0.5;
-            return area;
         }
-        int get_height(){
+
+        float get_height(){
             return height;
         }
-        int get_base(){
+
+        float get_base(){
             return base;
         }
-
-        int get_area(){
-            return area;
-        }
-
-        float how_much_to_paint(int price){
-            return area * price;
-        }
-
 };
 // One should be Circle, and the other one is Triangle
 // For each derived class, implement a calc_area() method
@@ -95,20 +82,19 @@ class Triangle: public Shape{
 
 int main()
 {
-    Circle cl(5);
+
+    Circle cl = Circle(7);
     cl.get_area();
 
-    cl.get_paint();
-    cout << "The circle's area is " << cl.how_much_to_paint(4) << endl;
+    cl.set_price(5);
+    cout << "Paint " << cl.how_much_to_paint() << endl;
 
-    Triangle tr(10, 4);
-    tr.get_area();
-    tr.get_height();
-    tr.get_base();
-    tr.get_area();
+    Triangle tr = Triangle(10, 2);
+    tr.set_price(5);
+    cout << tr.get_area() << endl;
 
-    tr.get_paint();
-    cout << "The triangle's area is " << tr.how_much_to_paint(11) << endl;
+    cout << "Paint of the triangle is " << tr.how_much_to_paint() << endl;
+
 
     return 0;
 }
@@ -117,7 +103,6 @@ int main()
 // Create getter methods for each values
 // (for example: in a Triangle class you should be able to
 // get: Height, Base and Area)
-
 
 // Still the shape exercise!
 // Create public method called how_much_to_paint()
