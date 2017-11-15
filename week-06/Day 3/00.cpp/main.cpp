@@ -9,7 +9,7 @@ class Human{
     public:
         virtual void traveling(){
             cout << "Human is walking" << endl << endl;
-        };
+        }
 };
 
 class SuperHuman: public Human {
@@ -17,7 +17,7 @@ class SuperHuman: public Human {
     public:
         void traveling(){
             cout << "Superhuman is flying" << endl << endl;
-        };
+        };;;;;;;;;;;;;;;;;;;;;;;;;
 
 };
 
@@ -26,20 +26,19 @@ class AquaMan: public Human {
     public:
         void traveling(){
             cout << "AquaHuman is riding with dolphins" << endl;
-        };
-
+        }
 };
 
 int main()
 {
-    Human travel;
-    travel.traveling();
+    Human tr;
+    tr.traveling();
 
     SuperHuman tra;
     tra.traveling();
 
-    AquaMan tr;
-    tr.traveling();
+    AquaMan trav;
+    trav.traveling();
 
     return 0;
 }
