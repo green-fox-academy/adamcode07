@@ -17,9 +17,9 @@ using namespace std;
 // What did You learn from this exercise?
 // Write it down in a comment into Your file!
 
-//float multiplicator(float a, float b){
-//    return a + b;
-//}
+float multiplicator(float a, float b){
+    return a + b;
+}
 int multiplicator(int a, int b){
     return a + b;
 }
