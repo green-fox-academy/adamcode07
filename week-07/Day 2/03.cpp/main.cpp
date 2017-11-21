@@ -18,21 +18,16 @@ using namespace std;
 // Write it down in a comment into Your file!
 
 float multiplicator(float a, float b){
-    return a + b;
+    return a * b;
 }
 int multiplicator(int a, int b){
-    return a + b;
+    return a * b;
 }
 
 int main() {
 
-    float x = 3.7;
-    float y = 8.1;
-    int w = 7;
-    int z = 11;
-
-    cout << multiplicator(x, y) << endl;
-    cout << multiplicator(w, z);
+    cout << multiplicator(2.5f, 3.1f) << endl;
+    cout << multiplicator(2, 3);
 
 
 	return 0;

@@ -11,11 +11,12 @@ Class Integer(){
 private:
     int a = 8;
 public:
-    void get_var(int a){
+    void add(Integer& a){
         return a;
     }
 
-    add();
+    add(int a);
+    add(int );
 
 }
 
