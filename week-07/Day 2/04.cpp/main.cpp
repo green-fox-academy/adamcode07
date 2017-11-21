@@ -7,23 +7,31 @@ using namespace std;
 // All methods should add the value of the parameters to the member variable of this.
 //
 // Try them out. Write code that demonstrates how they work.
-Class Integer(){
+class Integer{
 private:
-    int a = 8;
+    int a;
 public:
-    void add(Integer& a){
+    void set_a(int a){
+        this->a = a;
+    }
+
+    int add(Integer& param){
         return a;
     }
 
-    add(int a);
-    add(int );
+    int add(Integer& param, Integer& param1){
+        return a + param1.a;
+    }
+};
 
-}
+int main(){
 
-int main() {
+    Integer in1, in2, in3, in4, in5;
+    in1.set_a(1);
+    in2.set_a(2);
 
-    Integer in = Integer();
-    in.
+    cout << in1.add(in1) << endl;
+    cout << in2.add(in1, in2) << endl;
 
 	return 0;
 }
