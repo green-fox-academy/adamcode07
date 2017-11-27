@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int* sort_that_array(int *array, int length, int *new_array);
-int give_me_zat_numbr(int *array, int *length);
+int gimme_zat_numbr(int *array, int *length);
 int index_returner(int *array, int length, int num);
 
 int main()
@@ -12,7 +12,7 @@ int main()
     int num = 5;
     int new_array[len];
 
-    give_me_zat_numbr(array, &len);
+    gimme_zat_numbr(array, &len);
     sort_that_array(array, len, new_array);
     index_returner(new_array, len, num);
 
@@ -52,7 +52,7 @@ int* sort_that_array(int *array, int length, int *new_array){
         return new_array;
 }
 
-int give_me_zat_numbr(int *array, int *length){
+int gimme_zat_numbr(int *array, int *length){
 
     printf("Enter the value of N \n");
     scanf("%d", length);

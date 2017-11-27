@@ -3,22 +3,18 @@
 
 int main()
 {
-    printf("Type in a sentence:\n\n");
-    char str[256];
+    char str[55] ="This is a string for testing";
+	char *pch;
 
-    //TODO: write a c program which, splits a string to words by space
-	//solve the problem with the proper string.h function
-    gets(str);
-
-    char * pch;
-    printf ("Splitting string \"%s\" into tokens:\n",str);
-    pch = strtok (str," ");
+    pch = strtok (str, "i");
     while (pch != NULL)
         {
     printf ("%s\n",pch);
-    pch = strtok (NULL, " ");
-  }
+    pch = strtok (NULL, "i");
+        }
 
+
+ysolti
 
     return(0);
 }

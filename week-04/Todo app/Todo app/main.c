@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 void welcome_scr();
-int task_number = 0; //a tomb melyik elemeebe rakjuk a teendot
+int task_counter = 0; //a tomb melyik elemeebe rakjuk a teendot
 
 typedef struct {
 
@@ -24,8 +24,17 @@ int main()
         gets(command);
         char *tok1 = strtok(command, " ");
         char *tok2 = strtok(NULL, " ");
-        if(strcmp(tok1, "-a")){
-
+        if(strcmp(tok1, "-a") == 0){
+            printf("add");
+        }
+        else if(strcmp(tok1, "-wr") == 0){
+            printf("write");
+        }
+        else if(strcmp(tok1, "-rd") == 0){
+            printf("read");
+        }
+        else if(strcmp(tok1, "-l") == 0){
+            printf("read");
         }
     }
 
@@ -52,6 +61,6 @@ void welcome_scr(){
 
 void add_new_task(todo_t task_name, char *name)
 {
-
+//    strcpy(task_name[task_counter].name, name);
 
 }

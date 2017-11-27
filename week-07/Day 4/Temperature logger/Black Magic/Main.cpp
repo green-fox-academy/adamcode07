@@ -131,7 +131,7 @@ Data data_checker(string user_input){
 
         user_input.erase(0, pos + 1); // deletes everythin befor char in original string
         pos = user_input.find('.'); //looks for new char
-        if()
+        //if()
 
         data.month = stoi(user_input.substr(0, pos));
         cout << data.month << endl;

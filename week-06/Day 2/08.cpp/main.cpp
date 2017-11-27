@@ -20,7 +20,7 @@ class Student{
 
         }
 
-        int add_grade(){
+        void add_grade(){
             unsigned int i = 0;
             size_v = 5;
 
@@ -31,7 +31,7 @@ class Student{
             for (i = 0; i < size_v; i++)
                 cout << myVector[i] << endl;
 
-            return 0;
+            //return 0;
         }
 
         float get_average(){
