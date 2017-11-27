@@ -99,7 +99,10 @@ int main(void)
   {
 	  //TODO:
 	  //Flash the ledwith 200 ms period time
-
+	  BSP_LED_Off(LED_GREEN);
+	  HAL_Delay(100);
+	  BSP_LED_On(LED_GREEN);
+	  //HAL_Delay(100);
   }
 }
 
@@ -172,7 +175,6 @@ static void Error_Handler(void)
   /* User may add here some code to deal with this error */
   while(1)
   {
-	  BSP
   }
 }
 

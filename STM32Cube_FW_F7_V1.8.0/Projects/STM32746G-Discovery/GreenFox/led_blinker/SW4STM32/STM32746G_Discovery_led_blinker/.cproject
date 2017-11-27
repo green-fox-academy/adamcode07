@@ -24,7 +24,7 @@
 							<option id="fr.ac6.managedbuild.option.gnu.cross.fpu.1884487725" name="Floating point hardware" superClass="fr.ac6.managedbuild.option.gnu.cross.fpu" useByScannerDiscovery="false" value="fr.ac6.managedbuild.option.gnu.cross.fpu.fpv5-sp-d16" valueType="enumerated"/>
 							<option id="fr.ac6.managedbuild.option.gnu.cross.floatabi.556528624" name="Floating-point ABI" superClass="fr.ac6.managedbuild.option.gnu.cross.floatabi" useByScannerDiscovery="false" value="fr.ac6.managedbuild.option.gnu.cross.floatabi.hard" valueType="enumerated"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="fr.ac6.managedbuild.targetPlatform.gnu.cross.1585049158" isAbstract="false" osList="all" superClass="fr.ac6.managedbuild.targetPlatform.gnu.cross"/>
-							<builder buildPath="${workspace_loc:/STM32746G_Discovery_led_blinker}/Debug" id="fr.ac6.managedbuild.builder.gnu.cross.1508514071" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="fr.ac6.managedbuild.builder.gnu.cross">
+							<builder buildPath="${workspace_loc:/STM32746G_Discovery_led_blinker}/Debug" id="fr.ac6.managedbuild.builder.gnu.cross.1508514071" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="unlimited" superClass="fr.ac6.managedbuild.builder.gnu.cross">
 								<outputEntries>
 									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Debug"/>
 								</outputEntries>
@@ -55,7 +55,7 @@
 							<tool id="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler.916259328" name="MCU G++ Compiler" superClass="fr.ac6.managedbuild.tool.gnu.cross.cpp.compiler">
 								<option id="gnu.cpp.compiler.option.optimization.level.1467553845" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.402557912" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
-								<option id="gnu.cpp.compiler.option.include.paths.1531477369" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<option id="gnu.cpp.compiler.option.include.paths.1531477369" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../../../Inc"/>
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/CMSIS/Device/ST/STM32F7xx/Include"/>
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/STM32F7xx_HAL_Driver/Inc"/>
@@ -66,7 +66,7 @@
 									<listOptionValue builtIn="false" value="../../../../../../../Utilities/CPU"/>
 									<listOptionValue builtIn="false" value="../../../../../../../Drivers/CMSIS/Include"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.preprocessor.def.1384483926" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1384483926" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
 									<listOptionValue builtIn="false" value="STM32F746xx"/>
 								</option>
