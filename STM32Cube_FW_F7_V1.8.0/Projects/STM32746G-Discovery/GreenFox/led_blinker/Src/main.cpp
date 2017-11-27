@@ -103,6 +103,8 @@ int main(void)
 	  HAL_Delay(100);
 	  BSP_LED_On(LED_GREEN);
 	  //HAL_Delay(100);
+
+	  HAL_
   }
 }
 
