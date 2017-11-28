@@ -70,24 +70,76 @@ int main(void)
      and to enable the CPU Cache, respectively MPU_Config() and CPU_CACHE_Enable().
      These functions are provided as template implementation that User may integrate 
      in his application, to enhance the performance in case of use of AXI interface 
-     with several masters. */ 
+     with several masters. */
+	  /* Configure the MPU attributes as Write Through */
+	  MPU_Config();
+
+	  /* Enable the CPU Cache */
+	  CPU_CACHE_Enable();
+
+	  HAL_Init();
+
+	  /* STM32F7xx HAL library initialization:
+	       - Configure the Flash ART accelerator on ITCM interface
+	       - Configure the Systick to generate an interrupt each 1 msec
+	       - Set NVIC Group Priority to 4
+	       - Low Level Initialization
+	     */
+	  //HAL_Init();
+
+	  /* Configure the System clock to have a frequency of 216 MHz */
+	  SystemClock_Config();
+
+
+	__HAL_RCC_GPIOA_CLK_ENABLE();// we need to enable the GPIOA port's clock first
+
+	__HAL_RCC_GPIOF_CLK_ENABLE();
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	__HAL_RCC_GPIOI_CLK_ENABLE();
+
+
+
+
+	GPIO_InitTypeDef tda;            // create a config structure
+	tda.Pin = GPIO_PIN_0;            // this is about PIN 0
+	tda.Mode = GPIO_MODE_OUTPUT_PP;  // Configure as output with push-up-down enabled
+	tda.Pull = GPIO_PULLDOWN;        // the push-up-down should work as pulldown
+	tda.Speed = GPIO_SPEED_HIGH;     // we need a high-speed output
+
+	HAL_GPIO_Init(GPIOA, &tda);      // initialize the pin on GPIOA port with HAL
+
+	GPIO_InitTypeDef tda1;            // create a config structure
+	tda1.Pin = GPIO_PIN_10;            // this is about PIN 0
+	tda1.Mode = GPIO_MODE_OUTPUT_PP;  // Configure as output with push-up-down enabled
+	tda1.Pull = GPIO_PULLDOWN;        // the push-up-down should work as pulldown
+	tda1.Speed = GPIO_SPEED_HIGH;     // we need a high-speed output
+
+	HAL_GPIO_Init(GPIOF, &tda1);      // initialize the pin on GPIOA port with HAL
+
+	GPIO_InitTypeDef tda2;            // create a config structure
+	tda2.Pin = GPIO_PIN_9;            // this is about PIN 0
+	tda2.Mode = GPIO_MODE_OUTPUT_PP;  // Configure as output with push-up-down enabled
+	tda2.Pull = GPIO_PULLDOWN;        // the push-up-down should work as pulldown
+	tda2.Speed = GPIO_SPEED_HIGH;     // we need a high-speed output
+
+	HAL_GPIO_Init(GPIOF, &tda2);      // initialize the pin on GPIOA port with HAL
+
+	GPIO_InitTypeDef tda3;            // create a config structure
+	tda3.Pin = GPIO_PIN_8;            // this is about PIN 0
+	tda3.Mode = GPIO_MODE_OUTPUT_PP;  // Configure as output with push-up-down enabled
+	tda3.Pull = GPIO_PULLDOWN;        // the push-up-down should work as pulldown
+	tda3.Speed = GPIO_SPEED_HIGH;     // we need a high-speed output
+
+	HAL_GPIO_Init(GPIOF, &tda3);      // initialize the pin on GPIOA port with HAL
+
+	GPIO_InitTypeDef tda4;            // create a config structure
+	tda4.Pin = GPIO_PIN_7;            // this is about PIN 0
+	tda4.Mode = GPIO_MODE_INPUT;  // Configure as output with push-up-down enabled
+	tda4.Pull = GPIO_PULLUP;        // the push-up-down should work as pulldown
+	tda4.Speed = GPIO_SPEED_LOW;     // we need a high-speed output
+
+	HAL_GPIO_Init(GPIOC, &tda4);      // initialize the pin on GPIOA port with HAL
   
-  /* Configure the MPU attributes as Write Through */
-  MPU_Config();
-
-  /* Enable the CPU Cache */
-  CPU_CACHE_Enable();
-
-  /* STM32F7xx HAL library initialization:
-       - Configure the Flash ART accelerator on ITCM interface
-       - Configure the Systick to generate an interrupt each 1 msec
-       - Set NVIC Group Priority to 4
-       - Low Level Initialization
-     */
-  HAL_Init();
-
-  /* Configure the System clock to have a frequency of 216 MHz */
-  SystemClock_Config();
 
 
   /* Add your application code here     */
@@ -97,14 +149,34 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET); // setting the pin to 0
+
 	  //TODO:
 	  //Flash the ledwith 200 ms period time
-	  BSP_LED_Off(LED_GREEN);
-	  HAL_Delay(100);
-	  BSP_LED_On(LED_GREEN);
+	  //BSP_LED_Off(LED_GREEN);
 	  //HAL_Delay(100);
+	  //BSP_LED_On(LED_GREEN);
+	  //HAL_Delay(100);
+	  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_7)== 0){
 
-	  HAL_
+	 HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);   // setting the pin to 1
+	  HAL_Delay(100);                                      // wait a second
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET); // setting the pin to 0
+	  //HAL_Delay(100);
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_10, GPIO_PIN_SET);   // setting the pin to 1
+	  HAL_Delay(100);                                      // wait a second
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_10, GPIO_PIN_RESET); // setting the pin to 0
+	  //HAL_Delay(100);
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_9, GPIO_PIN_SET);   // setting the pin to 1
+	  HAL_Delay(100);                                      // wait a second
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_9, GPIO_PIN_RESET); // setting the pin to 0
+	  //HAL_Delay(100);
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_8, GPIO_PIN_SET);   // setting the pin to 1
+	  HAL_Delay(100);                                      // wait a second
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_8, GPIO_PIN_RESET); // setting the pin to 0
+	  //HAL_Delay(100);
+	  }
+
   }
 }
 
