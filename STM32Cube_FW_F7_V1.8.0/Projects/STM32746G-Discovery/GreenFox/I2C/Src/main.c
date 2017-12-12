@@ -117,7 +117,7 @@ int main(void) {
 	uart_handle.Init.HwFlowCtl = UART_HWCONTROL_NONE;
 	uart_handle.Init.Mode = UART_MODE_TX_RX;
 
-	BSP_COM_Init(COM1, &uart_handle);
+	//BSP_COM_Init(COM1, &uart_handle);
 
 	my_uart_init();
 	//HAL_UART_Receive()
@@ -126,38 +126,7 @@ int main(void) {
 	printf("\n-----------------WELCOME-----------------\r\n");
 	printf("**********in STATIC interrupts WS**********\r\n\n");
 
-
-	__HAL_RCC_GPIOB_CLK_ENABLE();                           // enable GPIO clock
-	__HAL_RCC_I2C1_CLK_ENABLE();                          // enable the clock of the used peripheral
-
-	GPIO_InitTypeDef GPIOTxConfig;                              // configure GPIOs for I2C data and clock lines
-	GPIOTxConfig.Pin			= GPIO_PIN_8 | GPIO_PIN_9;
-	GPIOTxConfig.Mode           = GPIO_MODE_AF_OD;      //configure in pen drain mode
-	GPIOTxConfig.Alternate      = GPIO_AF4_I2C1;
-	GPIOTxConfig.Speed			= GPIO_SPEED_HIGH;
-	GPIOTxConfig.Pull			= GPIO_PULLUP;
-
-
-	HAL_GPIO_Init(GPIOB, &GPIOTxConfig);
-
-	I2C_HandleTypeDef I2cHandle;                          // defining the I2C configuration structure
-
-	I2cHandle.Instance             = I2C1;
-	I2cHandle.Init.Timing          = 0x40912732;
-	I2cHandle.Init.AddressingMode  = I2C_ADDRESSINGMODE_7BIT;
-
-	HAL_I2C_Init(&I2cHandle);
-
-	uint8_t reg = 0;
-	uint8_t temp = 0;
-
-
 	while (1) {
-
-		HAL_I2C_Master_Transmit(&I2cHandle, 0b10010000, &reg, 1, 100);
-		HAL_I2C_Master_Receive(&I2cHandle, 0b10010000, &temp, 1, 100);
-		HAL_Delay(2000);
-		printf("Temp: %d\r\n", temp);
 	}
 }
 
